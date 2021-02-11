@@ -1,0 +1,253 @@
+/* 
+font-family: 'Roboto', sans-serif; 
+weights used: 
+300,     400,     700
+light , regular , bold
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+div.headings {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+  
+h1.overview_heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+h2.businness_name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+div.cols {
+    background-color: #F1F1F1;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    transition: all .5s ease;
+}
+
+div.cols:hover {
+    background-color: #cecece;
+    transition: all .5s ease;
+}
+
+h3.numbers {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 2.5rem;
+}
+
+p.titles {
+    position: absolute;
+    bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #656565;
+}
+
+.eclipse_icon_bg {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* icon circle background */
+.voucher_icon { background-color: #FFD600; }
+.total_people_icon { background-color: #00E0FF; }
+.gross_revenue_icon { background-color: #52FF00; }
+.net_payable_icon { background-color: #FF7878; }
+.total_payments_icon { background-color: #D8A7FF; }
+.balance_due_icon { background-color: #FFAF82; }
+
+/* icons */
+.fa-ticket-alt, .fa-users, .fa-balance-scale, 
+.fa-cash-register, .fa-coins, .fa-money-bill-alt { 
+    font-size: 22px;
+}
+
+.served, .notserved {
+    font-weight: bold;
+}
+
+.fa-check-circle, .fa-times-circle {
+    font-size: 20px;
+}
+
+.served, .fa-check-circle { 
+    color: #44C4A1;
+}
+
+.notserved, .fa-times-circle {
+    color: #F44336;
+}
+
+td.served { font-family: 'Roboto', sans-serif; }
+
+.camp_summary_table {
+    font-family: 'Roboto', sans-serif;
+}
+
+.offers_table td {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.offers_table thead tr th {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.offers_table thead tr th {
+    vertical-align: middle;
+}
+
+.offers_table tbody tr td {
+    vertical-align: middle;
+}
+
+button.view_offer .fa-eye {
+    font-size: 20px;
+}
+
+button.view_offer {
+    background-color: unset;
+    border: none;
+    color: #4DCFE0;
+    font-weight: bold;
+}
+
+button.view_offer:hover {
+    background-color: unset;
+    color: #4DCFE0;
+}
+
+button.view_offer:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.view_offer:not(:disabled):not(.disabled):active {
+    background-color: unset;
+    border-color: unset;
+    color: #4DCFE0;
+    outline: none;
+}
+
+.revenue_campaign_info, .please_note {
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    padding: 1.5rem;
+}
+
+.revenue_campaign_info h3, .please_note h3 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.revenue_campaign_info .campaign_details, .please_note p {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.campaign_summary {
+    position: relative;
+}
+
+.circle-span {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.campaign_summary .fa-plus-circle {
+    color: #44C4A1;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+h3.terms {
+    margin-bottom: .5rem !important;
+}
+
+.first_terms {
+    margin-left: 1rem;
+}
+
+ul.term_and_cond li {
+    list-style: square;
+    font-size: 13px;
+}
+
+.payment_transaction {
+    position: relative;
+}
+
+.payment_transaction .fa-plus-circle {
+    color: #44C4A1;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.payment_table thead tr th {
+    vertical-align: middle;
+}
+
+.payment_table tbody tr td {
+    vertical-align: middle;
+}
+
+.fa-trash-alt, .fa-pencil-alt, .fa-long-arrow-alt-down, .fa-file-pdf {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.add_comment_payment {
+    background-color: unset;
+    color: #44C4A1;
+    font-weight: 700;
+    border: none;
+}
+
+.add_comment_payment:hover {
+    background-color: unset;
+    color: teal;
+}
+
+.add_comment_payment:not(:disabled):not(.disabled):active {
+    background-color: unset;
+    border-color: unset;
+    color: teal;
+    outline: none;
+}

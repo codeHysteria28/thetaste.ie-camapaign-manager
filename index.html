@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- header start -->
+<header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+                <img src="thetaste-site-homepage-logo5.png" class="img-fluid" style="width: 220px" alt="" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#venueNavbarToggler" aria-controls="venueNavbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="venueNavbarToggler">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">	
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+            
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Campaign Manager</a>
+                </li>
+            
+                <li class="nav-item ">
+                    <a class="nav-link" href="">Profile</a>
+                </li>
+            
+                <li class="nav-item ">
+                    <a class="nav-link" href="" data-toggle="tooltip" data-placement="left" title="Logout" id="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- header end -->
+
+<!-- main container start -->
+<div class="container mb-3">
+    <div class="headings">
+      <h1 class="overview_heading">Overview</h1>
+      <h2 class="businness_name">Conrad Hotel</h2>
+    </div>
+    
+    <div class="row" id="first_row">
+      <div class="col-md my-2 cols">
+        <h3 class="numbers">321<h3>
+        <p class="titles">Vouchers Sold</p>
+        <div class="eclipse_icon_bg voucher_icon">
+          <i class="fas fa-ticket-alt"></i>
+        </div>
+      </div>
+      <div class="col-md my-2 cols">
+        <h3 class="numbers">643<h3>
+        <p class="titles">Total People</p>
+        <div class="eclipse_icon_bg total_people_icon">
+          <i class="fas fa-users"></i>
+        </div>
+      </div>
+      <div class="col-md my-2 cols">
+        <h3 class="numbers">€ 19,260<h3>
+        <p class="titles">Gross Revenue</p>
+        <div class="eclipse_icon_bg gross_revenue_icon">
+          <i class="far fa-money-bill-alt"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md my-2 cols">
+        <h3 class="numbers">€ 15,706<h3>
+        <p class="titles">Net Payable</p>
+        <div class="eclipse_icon_bg net_payable_icon">
+          <i class="fas fa-coins"></i>
+        </div>
+      </div>
+      <div class="col-md my-2 cols">
+        <h3 class="numbers">€ 15,657<h3>
+        <p class="titles">Total Payments</p>
+        <div class="eclipse_icon_bg total_payments_icon">
+          <i class="fas fa-cash-register"></i>
+        </div>
+      </div>
+      <div class="col-md my-2 cols">
+        <h3 class="numbers">€ 48,93<h3>
+        <p class="titles">Balance Due</p>
+        <div class="eclipse_icon_bg balance_due_icon">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFERS TABLE START -->
+
+    <table class="table table-striped table-hover table-bordered text-center ml-2 mt-5 mb-5 offers_table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Offer</th>
+            <th scope="col">Status</th>
+            <th scope="col">Revenue</th>
+            <th scope="col">Total People</th>
+            <th scope="col">Commission</th>
+            <th scope="col">Vat</th>
+            <th scope="col">Net Payable</th>
+            <th scope="col">Balance Due</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>123456</td>
+            <td class="text-justify">
+                Luxury Cocktail Afternoon Tea on the 
+                Terracefor Two People at the Award Winning 
+                Five Star Conrad Hotel for only €60
+            </td>
+            <td class="served">
+              <i class="fas fa-check-circle"></i><br/>
+              Active
+            </td>
+            <td>6230.12</td>
+            <td>215</td>
+            <td>936</td>
+            <td>312</td>
+            <td>5000.12</td>
+            <td>289</td>
+            <td>
+                <button class="btn btn-primary view_offer">
+                    <i class="far fa-eye"></i><br/>
+                    View
+                </button>
+            </td>
+          </tr>
+          <tr>
+            <td>654321</td>
+            <td class="text-justify">
+                Luxury Cocktail Afternoon Tea on the 
+                Terracefor Two People at the Award Winning 
+                Five Star Conrad Hotel for only €60
+            </td>
+            <td class="notserved">
+              <i class="fas fa-times-circle"></i><br/>
+              Expired
+            </td>
+            <td>6230.12</td>
+            <td>215</td>
+            <td>936</td>
+            <td>312</td>
+            <td>5000.12</td>
+            <td>289</td>
+            <td>
+                <button class="btn btn-primary view_offer">
+                    <i class="far fa-eye"></i><br/>
+                    View
+                </button>
+            </td>
+          </tr>  
+        </tbody>
+      </table>
+
+      <!-- OFFERS TABLE END -->
+
+      <!-- REVENUE CAMPAIGN DETAILS START -->
+
+      <div class="revenue_camapaign_details">
+        <div class="row">
+            <div class="col-md-4 revenue_campaign_info cols">
+                <h3>Revenue Campaign : 291986</h3>
+                <p class="campaign_details">
+                    Luxury Cocktail Afternoon Tea on the
+                    Terrace for Two People at the Award 
+                    Winning Five Star Conrad Hotel 
+                    for only €60
+                </p>
+                <br/>
+                <p class="status">Status: <i class="fas fa-times-circle ml-2"></i><span class="ml-3 text-danger">Expired</span></p>
+            </div>
+            <div class="col-md please_note cols">
+                <h3>Please Note :</h3>
+                <p>
+                    This management console has 3 unique rules, the first is all payments due to venues
+                    are for served customers only, by law TheTaste must be able to complete refunds 
+                    direct to customers who have not been served. The second change you will notice is 
+                    as a result of the recent GDPR laws meaning we can only disclose the email addresses 
+                    of the customers you have served. The final change is due to National Consumer Law
+                    meaning we have to allow 14 days after the campaign validity has expired
+                    to issue payments.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md please_note cols">
+                <h3>Important :</h3>
+                <p>
+                    By clicking the Redeem button below you are confirming you have fully served that customer and the 
+                    customer will receive an automatic email thanking them and asking them to share their experience 
+                    feedback with us. Fraudulently Redeeming Vouchers will expose details of customers 
+                    below and break GDPR Laws.
+                </p>
+                <p class="text-danger font-weight-bold">You must retain all paper vouchers for this campaign!</p>
+                <p class="text-danger font-weight-bold">
+                    Fraudulently Redeeming Vouchers will result in a full paper 
+                    audit of this campaign and Put Your Payment On Hold!
+                </p>
+            </div>
+            <div class="col-md-4 revenue_campaign_info cols">
+                <h3>Campaign VAT Statement :</h3>
+                <p class="campaign_details">
+                    Digital Food Ltd T/A TheTaste.ie<br/><br/>
+                    5 Main Street, Rathangan, Co. Kildare<br/><br/>
+                    Company No 548735<br/><br/>
+                    VAT No 3312776JH<br/><br/>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <!-- REVENUE CAMPAIGN DETAILS END -->
+
+      <!-- CAMPAIGN SUMMARY START -->
+
+      <div class="campaign_summary mt-5">
+        <h3 class="text-center">Campaign Summary</h3>
+        <span class="circle-span" data-placement="top" title="Show / Hide" data-toggle="tooltip">
+            <i 
+            data-toggle="collapse" 
+            data-target="#campaign_summary_collapse" 
+            aria-expanded="false" 
+            aria-controls="campaign_summary_collapse" 
+            class="fas fa-plus-circle"></i>
+        </span>
+        <h4>Orders (2 rows)</h4>
+
+        <div class="collapse" id="campaign_summary_collapse">
+            <button class="btn btn-success mt-3">Redeem Checked</button>
+            <table class="table table-striped table-bordered text-center mt-5">
+                <thead>
+                    <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Customer Email</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>123456</td>
+                    <td>Edel Tighe</td>
+                    <td>ebtighe@eircim.net</td>
+                    <td>1</td>
+                    <td class="served">
+                        <i class="fas fa-check-circle"></i>
+                        Voucher Served
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>654321</td>
+                    <td>Edel Tighe</td>
+                    <td>ebtighe@eircim.net</td>
+                    <td>1</td>
+                    <td class="notserved">
+                        <i class="fas fa-times-circle"></i>
+                        Not Served / Expired
+                    </td>
+                    </tr>  
+                </tbody>
+            </table>
+                
+            <div class="row">
+                <div class="col-md my-2 cols">
+                    <h3 class="numbers">€ 19,260<h3>
+                    <p class="titles">Gross Revenue</p>
+                    <div class="eclipse_icon_bg gross_revenue_icon">
+                        <i class="far fa-money-bill-alt"></i>
+                    </div>
+                </div>
+                <div class="col-md my-2 cols">
+                    <h3 class="numbers">143<h3>
+                    <p class="titles">Out of possible 170</p>
+                    <div class="eclipse_icon_bg total_people_icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="row">
+                <div class="col-md my-2 cols">
+                    <h3 class="numbers">€ 15,706<h3>
+                    <p class="titles">Commission</p>
+                    <div class="eclipse_icon_bg net_payable_icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                </div>
+                <div class="col-md my-2 cols">
+                    <h3 class="numbers">€ 15,657<h3>
+                    <p class="titles">Net Payable</p>
+                    <div class="eclipse_icon_bg total_payments_icon">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                </div>
+                <div class="col-md my-2 cols">
+                    <h3 class="numbers">€ 48,93<h3>
+                    <p class="titles">Tax</p>
+                    <div class="eclipse_icon_bg balance_due_icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TERMS AND CONDITIONS START -->
+
+            <div class="revenue_camapaign_details mt-5">
+                <div class="row">
+                    <div class="col-md-3 revenue_campaign_info cols">
+                        <h3 class="terms">Campaign Terms & Conditions</h3>
+                        <p class="text-secondary">(printed on each voucher)</p>
+                        <br/><br/>
+                        <p class="campaign_details">
+                            "This is your TheTaste voucher. 
+                            Please print off and present at the 
+                            restaurant on your arrival.
+                        </p>
+                    </div>
+                    <div class="col-md please_note cols">
+                        <h3>Terms & Conditions</h3>
+                        <div class="row">
+                            <div class="col-md first_terms">
+                                <ul class="term_and_cond">
+                                    <li>This voucher can be used from August17th until 31st October 2020</li>
+                                    <li>Available 7 days per week from 2pm to 4:30pm</li>
+                                    <li>This offer includes afternoon tea for two u2028plus 2 cocktails</li>
+                                    <li>Advance booking is required by telephone: tel: <span class="font-weight-bold">01 6028876</span></li>
+                                    <li>Please mention you have a taste voucher at the time of booking and be presented on arrival in paper form</li>
+                                    <li>Booking has to be made at least 48 hours in advance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md">
+                                <ul class="term_and_cond">
+                                    <li>If cancelled within 48 hours voucher will be void</li>
+                                    <li>A maximum of 4 people per booking when dining with voucher</li>
+                                    <li>This voucher cannot be used in conjunction with any other offer or promotion</li>
+                                    <li>Any overspend on the day should be paid directly to the hotel</li>
+                                    <li>You must be over 18 years of age to purchase this offer</li>
+                                    <li>Booking subject to availability</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- TERMS AND CONDITIONS END -->
+        </div>
+      </div>
+      <!-- CAMPAIGN SUMMARY END -->
+
+    <!-- PAYMENT TRANSACTION START -->
+
+    <div class="payment_transaction mt-5">
+        <h3 class="text-center">Payment Trasnsactions</h3>
+        <span class="circle-span" data-placement="top" title="Show / Hide" data-toggle="tooltip">
+        <i 
+            data-toggle="collapse" 
+            data-target="#payment_transaction_collapse" 
+            aria-expanded="false" 
+            aria-controls="payment_transaction_collapse" 
+            class="fas fa-plus-circle"></i>
+        </span>
+        <h4>Payment Items (2 rows)</h4>
+        
+        <div class="collapse mt-5" id="payment_transaction_collapse">
+            <table class="table table-striped table-bordered text-center payment_table">
+                <thead>
+                  <tr>
+                    <th scope="col">Payment ID</th>
+                    <th scope="col">Payment Date</th>
+                    <th scope="col">Payment Amount <i class="fas fa-long-arrow-alt-down text-success" style="margin-left: 15px;"></i></th>
+                    <th scope="col">Invoice</th>
+                    <th scope="col">Comment</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">1</td>
+                    <td>14.01.2021 17:55</td>
+                    <td>113.45</td>
+                    <td><i class="fas fa-file-pdf text-danger"></i></td>
+                    <td>
+                      <button type="button" class="btn btn-primary add_comment_payment" data-toggle="modal" 
+                              data-target="#addCommentModal">
+                              <i class="fas fa-plus"></i> Add comment
+                      </button>
+                    </td>
+                    <td><i class="fas fa-pencil-alt text-warning"></i></td>
+                    <td><i class="fas fa-trash-alt text-danger"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <!--  ADD NEW PAYMENT MODAL TRIGGEr  -->
+              <button type="button" class="btn btn-primary add_comment_payment" data-toggle="modal" data-target="#addPaymentModal">
+                <i class="fas fa-plus"></i> Add new payment
+              </button>
+              
+              
+              
+              <!-- Payment Modal -->
+              <div class="modal fade" id="addPaymentModal" tabindex="-1" role="dialog" aria-labelledby="addPaymentModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="addPaymentModalLabel">Add new payment</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="payment_date">Payment date</label>
+                          <input class="form-control" type="date" id="payment_date" name="payment_date">
+                        </div>
+                        <div class="form-group">
+                          <label for="payment_amount">Payment amount</label>
+                          <input class="form-control" type="text" id="payment_amount" name="payment_amount">
+                        </div>
+                        <div class="form-group">
+                          <label for="comment">Comment</label>
+                          <textarea class="form-control" id="comment" name="comment" placeholder="Add comment" rows="3"></textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Add payment</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              <!-- Comment Modal -->
+              <div class="modal fade" id="addCommentModal" tabindex="-1" role="dialog" aria-labelledby="addCommentModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="addCommentModalLabel">Add new comment</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="comment">Comment</label>
+                          <textarea class="form-control" id="comment" name="comment" placeholder="Add comment" rows="3"></textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- PAYMENT TRANSACTION END -->
+
+  </div>
+<!-- main container end -->
+
+
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
+<script src="./app.js"></script>
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+</body>
+</html>
