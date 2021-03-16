@@ -101,10 +101,68 @@
     </div>
 
     <!-- OFFERS TABLE START -->
+    <button class="btn btn-success mt-5 ml-2" id="payAllSelected" data-toggle="modal" data-target="#paySelectedModal">Pay selected offers</button>
 
-    <table class="table table-striped table-hover table-bordered text-center ml-2 mt-5 mb-5 offers_table">
+     <!-- Selected offers payment modal -->
+     <div class="modal fade" id="paySelectedModal" tabindex="-1" role="dialog" aria-labelledby="paySelectedModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="paySelectedModalLabel">Add Payment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="">Selected offers <span>by ID</span></label>
+                <table class="table table-striped table-hover table-bordered text-center offers_table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Balance Due</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>123456</td>
+                      <td class="served">
+                        <i class="fas fa-check-circle"></i><br/>
+                        Active
+                      </td>
+                      <td>5000.12</td>
+                    </tr> 
+                  </tbody>
+                </table>
+              </div>
+              <div class="form-group">
+                <label for="payment_date">Payment date</label>
+                <input class="form-control" type="date" id="payment_date" name="payment_date">
+              </div>
+              <div class="form-group">
+                <label for="payment_amount">Payment amount</label>
+                <input class="form-control" type="text" id="payment_amount" name="payment_amount" value="5000.12">
+              </div>
+              <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea class="form-control" id="comment" name="comment" placeholder="Add comment" rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Make payment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="table table-striped table-hover table-bordered text-center ml-2 mt-3 mb-5 offers_table">
         <thead>
           <tr>
+            <th><input type="checkbox" id="checkAll" name="checkAll"></th>
             <th scope="col">ID</th>
             <th scope="col">Offer</th>
             <th scope="col">Status</th>
@@ -119,6 +177,7 @@
         </thead>
         <tbody>
           <tr>
+            <td><input type="checkbox" class="checkSingle" id="123456" checked></td>
             <td>123456</td>
             <td class="text-justify">
                 Luxury Cocktail Afternoon Tea on the 
@@ -136,13 +195,14 @@
             <td>5000.12</td>
             <td>289</td>
             <td>
-                <button class="btn btn-primary view_offer">
+                <button class="btn btn-primary view_offer" data-toggle="modal" data-target="#redemptionModal">
                     <i class="far fa-eye"></i><br/>
                     View
                 </button>
             </td>
           </tr>
           <tr>
+            <td><input type="checkbox" class="checkSingle" id="123456"></td>
             <td>654321</td>
             <td class="text-justify">
                 Luxury Cocktail Afternoon Tea on the 
@@ -170,6 +230,49 @@
       </table>
 
       <!-- OFFERS TABLE END -->
+
+      <!-- view redemption for offer -->
+     <div class="modal fade" id="redemptionModal" tabindex="-1" role="dialog" aria-labelledby="redemptionModalLabel" aria-hidden="true">
+      <div class="modal-dialog" id="redemptionModalDialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="redemptionModalLabel">Offers</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <button class="btn btn-success mb-2" disabled>Reedem checked</button>
+            <table class="table table-striped table-hover table-bordered text-center offers_table">
+              <thead>
+                <tr>
+                  <th scope="col"><input type="checkbox"></th>
+                  <th scope="col">Order ID</th>
+                  <th scope="col">Customer Name</th>
+                  <th scope="col">Customer Email</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>123456</td>
+                  <td>Joe Doe</td>
+                  <td>joe.doe@gmail.com</td>
+                  <td>1</td>
+                  <td><button class="btn btn-success">Reedem</button></td>
+                </tr> 
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Make payment</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
       <!-- REVENUE CAMPAIGN DETAILS START -->
 

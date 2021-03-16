@@ -251,3 +251,11 @@ ul.term_and_cond li {
     color: teal;
     outline: none;
 }
+
+button#payAllSelected {
+    background-color: #44C4A1;
+}
+
+div#redemptionModalDialog {
+    max-width: 650px;
+}
